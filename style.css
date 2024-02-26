@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #bfd7e4;
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  height: 465px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #293241;
+}
+
+.page {
+  min-height: 300px;
+  width: 100%;
+}
+
+header {
+  padding-top: 96px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top {
+  background-color: #f67669;
+  width: 750px;
+  height: 133px;
+  margin-top: 34px;
+
+  border-radius: 15px 15px 0 0;
+}
+
+h1,
+h2 {
+  font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 133px;
+  margin: 0;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  margin: 2px auto 30px;
+}
+
+form {
+  background-color: #ffffff;
+  width: 750px;
+  min-height: 300px;
+  margin: 0 auto 70px;
+  box-sizing: border-box;
+  padding: 31px 64px;
+  border-radius: 0 0 20px 20px;
+}
+
+fieldset {
+  border: none;
+  padding-bottom: 31px;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.fieldset-wrapper legend {
+  font-size: 24px;
+  line-height: 34px;
+  font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+  color: #253b51;
+  text-align: center;
+  border-bottom: #e6e6f0 1px solid;
+  padding-bottom: 10px;
+}
+
+.fieldset-wrapper label {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #4e4958;
+  padding-bottom: 10px;
+  padding-top: 30px;
+}
+
+.input-wrapper label,
+.data-hora label {
+  padding-top: 30px;
+  display: block;
+}
+
+.checkbox-wrapper {
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 25px;
+  gap: 8px;
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+}
+
+.checkbox-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='24' height='24' rx='8' fill='%23FAFAFC' stroke='%23E6E6F0'/%3E%3Cg clip-path='url(%23clip0_5001_21)'%3E%3Cpath d='M10 17.17L5.83 13L4.41 14.41L10 20L22 8L20.59 6.59L10 17.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_5001_21'%3E%3Crect width='24' height='24' fill='white' transform='translate(1 1)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+.checkbox-wrapper label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border: #e6e6f0 1px solid;
+  border-radius: 8px;
+}
+
+.checkbox-wrapper input:focus + label::before {
+  outline: 2px solid black;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 300px;
+}
+
+span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #c1bccc;
+  padding-left: 10px;
+}
+
+.nome-sobrenome,
+.input-first label {
+  display: flex;
+  gap: 22px;
+}
+
+.data-hora {
+  display: flex;
+  gap: 32px;
+}
+
+.horas {
+  display: flex;
+  gap: 10px;
+}
+
+.input-wrapper input,
+.input-first input,
+.input-wrapper textarea,
+select,
+.input-data input,
+.input-hora input {
+  background: #fafafc;
+  border: #e6e6f0 1px solid;
+  height: 55px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+
+.input-first input {
+  width: 293.5px;
+}
+
+.input-wrapper input {
+  width: 609px;
+}
+
+.input-wrapper textarea {
+  display: flex;
+  height: 166px;
+  width: 100%;
+}
+
+.input-data input {
+  display: flex;
+  width: 300px;
+  margin: 0;
+}
+
+.input-hora input {
+  width: 120px;
+}
+
+.botao-salvar {
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+
+button {
+  background-color: #f67669;
+  border-radius: 8px;
+  border: none;
+  font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+}
+
+button:hover {
+  background-color: #f75543;
+}
